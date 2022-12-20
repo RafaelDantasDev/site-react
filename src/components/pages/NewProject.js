@@ -6,6 +6,13 @@ function NewProject() {
 
     const hystory = useHistory()
 
+    function createPost(project){
+
+        // initialize cost and services
+        project.cost = 0
+        project.servoces = []
+    }
+
     return (
         <div className={styles.newproject_container}>
             <h1>Criar Projeto</h1>
