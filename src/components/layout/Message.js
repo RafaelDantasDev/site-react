@@ -1,5 +1,7 @@
+import styles from './Message.module.css'
 
-function Message() {
+
+function Message({type, msg}) {
     return(
         <div>
             <p>Mensagem</p>
