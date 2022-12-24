@@ -15,7 +15,7 @@ function NewProject() {
         fetch("http://localhost:5000/projects", {
             method: 'POST',
             headers: {
-                'content-type': 'application/json',
+                'Content-type': 'application/json',
             },
             body: JSON.stringify(project),
         })
@@ -23,8 +23,10 @@ function NewProject() {
         .then((data) => {
             console.log(data)
             // redirect
+            history.push('/projects', {message: 'Projeto criado com sucesso!'})
+            
         })
-        .catch(err => console.log(err))
+        .catch((err) => console.log(err))
     }
 
     return (
